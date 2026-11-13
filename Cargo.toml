@@ -1,0 +1,21 @@
+[package]
+name = "ssbu-gsp-scouter"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+
+[package.metadata.skyline]
+titleid = "01006A800016E000"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+skyline = { git = "https://github.com/ultimate-research/skyline-rs.git" }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+lto = true
